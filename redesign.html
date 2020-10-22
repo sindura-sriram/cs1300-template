@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <title>Bitter + Sweet Coffeeshop</title>
+    <style> 
+        .flexbox{
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-shrink: 1;
+        }
+        img{
+            width: auto;
+        }
+        div{
+            width: auto;
+        }
+        p{
+            width: auto;
+        }
+        body{
+            display: block;
+            width: 100%;
+            height: 270vh;
+            font-family: 'VT323', monospace;
+            background-color: whitesmoke;
+        }
+        .header{
+            display: inline-flex;
+            width:100vw;
+            height: 20.5vh;
+            border: 3px dashed cornflowerblue;
+            margin-bottom: 0vh;
+        }
+
+        .logo{
+            width: 40vw;
+            height: 20vh;
+            border: 3px dashed cornflowerblue;
+        }
+
+        ul {
+            width: 60vw;
+            height: 10vh;
+            list-style-type: none;
+            margin: 0px;
+            margin-right: 10vw;
+            margin-top: 5vw;
+            font-style: italic;
+            font-family: 'VT323', monospace;
+            text-transform: uppercase;
+        }
+
+        li a{
+            display: inline;
+            color: black;
+            padding: 14px 16px;
+            text-align: right;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        li a:hover{
+            color: cornflowerblue;
+        }
+
+        li{
+            display: inline;
+            letter-spacing: 2px;
+        }
+
+        .page_container{
+            display: inline-flex;
+            width: 100vw;
+        }
+
+        .welcome{
+            display: inline-flex;
+            width: 100vw;
+            height: 50vh;
+        }
+
+        .welcome > p{
+            text-align: center;
+            margin-top: 8vw;
+            width: 80vw;
+            font-size: 25px;
+            font-style: italic;
+            color: black;
+        }
+
+        .coffee{
+            margin-top: 6vw;
+            margin-left: 10vw;
+            margin-right: 15vw;
+            width: auto;
+        }
+
+        .about{
+            width: 100vw;
+            height: 25vh;
+            background-color:rgb(126, 157, 214);
+            display: flex;
+            border: blue 1px solid;
+        }
+
+        .about p{
+            color: white;
+            margin-top: 8vh;
+            text-align: center;
+            width: 60vw;
+            font-size: larger;
+            margin-left: 8vw;
+        }
+        .staff{
+            margin-top: 0vh;
+            margin-left: 2vw;
+            max-height: 20vh;
+        }
+
+        .services{
+            margin-top: 1em;
+            height: 50vh;
+            margin-bottom: 3em;
+            justify-content: space-evenly;
+        }
+
+        .button{
+            margin-bottom: 3em;
+            justify-content: space-evenly;
+        }
+
+        button{
+            background-color: cornflowerblue;
+            border: blue 1px solid;
+            border-radius: 15px;
+            color: #ffffff;
+            padding: 15px 32px;
+            text-decoration: none;
+        }
+
+        .location{
+            max-height: 15em;
+            border: 3px solid navy;
+            text-align: center;
+        }
+        .location > p{
+            color: black;
+            font-size: 30px;
+        }
+
+        .gallery{
+            width: 120vw;
+            margin-top: 30vh;
+            margin-bottom: 0vh;
+            margin-left: -4vw;
+            height: 10vh;
+            border: 2px black;
+        }
+
+        .icons{
+            text-align: center;
+            margin-right: 0vh;
+            margin-left: 13vw;
+        }
+        .icon{
+            margin-top: 0vh;
+            margin-left: 4vw;
+            max-width: 32px;
+            max-height: 32px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img  class = "logo" src="../KWL-imgs/logo.jpg" alt="logo">
+        <ul class = "Menu">
+            <li><a  class="active" href="#home">Home</a></li>
+            <li><a  href="#menu">Menu</a></li>
+            <li><a  href="#menu">Services</a></li>
+            <li><a  href="#menu">Staff</a></li>
+            <li><a  href="#menu">About</a></li>
+            <li><a  href="#menu">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="welcome">
+        <p  style="width: 100vw;">Welcome to BITTER + SWEET. <br> We are a local coffeeshop based in Cupertino, CA, just off S. De Anza Blvd.<br>
+             We serve the best coffee and desserts in the South Bay Community.
+        </p>
+        <picture>
+            <source srcset="coffee.jpg" media="(max-width: 600px)">
+            <source srcset="coffee.jpg">
+            <img id="aspect" class="coffee" src="coffee.jpg" alt="coffee">
+        </picture>
+    </div>
+
+    <div class="about flexbox">
+        <img  class="staff" src="daniel_working.jpg" alt="staff">
+        <p>We stand proudly behind our products and service, and invite you in to be treated to an unforgettable experience.
+             We have tea, chai lattes, and a white matcha latte for those who prefer non-coffee drinks. And if you are in the
+              mood for espresso and ice cream, we do a great affogato with Tahitian Vanilla ice cream.
+        </p>
+    </div>
+
+    <div class="services flexbox page_container">
+        <picture>
+            <source srcset="coffee.jpg" media="(max-width: 600px)">
+            <img  id="aspect" src="coffee.jpg" alt="coffee">
+        </picture>
+        <picture>
+            <source srcset="other_drinks.jpg" media="(max-width: 600px)">
+            <source srcset="other_drinks.jpg">
+            <img id="aspect" src="other_drinks.jpg" alt="other_drinks">
+        </picture>
+        <picture>
+            <source srcset="pastries_and_cake.jpg" media="(max-width: 600px)">
+                <source srcset="pastries_and_cake.jpg">
+            <img id="aspect" src="pastries_and_cake.jpg" alt=pastries_and_cake"">
+        </picture>
+        <picture>
+            <source srcset="ice_cream.jpg" media="(max-width: 600px)">
+                <source srcset="ice_cream.jpg">
+            <img id="aspect" src="ice_cream.jpg" alt="ice_cream">
+        </picture>
+    </div>
+    <div class="button page_container">
+        <button>Menu</button>
+        <button>Services Overview</button>
+    </div>
+
+    <div class="location">
+        <p id="aspect">
+            We are located at 20560 TOWN CENTER LANE, in VILLAGIO CENTER,<br>
+            just a 2 minutes' walk from the CUPERTINO LIBRARY and CITY HALL.<br>
+            Our neighboring retail tenants include Arirang Tofu and BBQ, Curry House,<br>
+            and Kee Wah Bakery.
+        </p>
+    </div>
+
+    <div class="gallery flexbox page_container">
+        <img id="aspect" src="gallery_1.png" alt="coffee green">
+        <img id="aspect" src="gallery_2.png" alt="coffee brown">
+        <img id="aspect" src="gallery_3.png" alt="coffee red">
+    </div>
+
+    <div class="icons">
+       <ul>
+           <li><a href="#facebook"></a>
+                <picture>
+                    <img id="aspect"class="icon" src="../icons/facebook.png" alt="facebook">
+                </picture>
+            </li>
+           <li><a href="#insta"></a>
+            <picture>
+                <img src="../icons/instagram.png" class="icon" alt="instagram">
+            </picture>
+                
+            </li>
+           <li><a href="#yelp"></a>
+            <picture>
+                <img src="../icons/yelp.png" class="icon" alt="yelp">
+            </li>
+            </picture>
+                
+           <li><a href="#maps"></a>
+            <picture>
+                <img src="../icons/pin.png" class="icon" alt="map">
+            </picture>
+            </li>
+       </ul>
+    </div>
+
+</body>
+</html>
